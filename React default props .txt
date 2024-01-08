@@ -1,0 +1,49 @@
+default props 
+
+const ShoppingCart = (props) => {
+  return (
+    <div>
+      <h1>Shopping Cart Component</h1>
+    </div>
+  )
+};
+
+// Change code below this line
+
+
+ShoppingCart.defaultProps = {
+  items: 0
+};
+
+<ShoppingCart />
+
+https://medium.com/frontendweb/what-is-defaultprops-in-reactjs-and-how-do-you-use-it-66a9c739da89
+
+
+////////////////////////////
+Overriding default props
+
+Note: Remember that the syntax to add a prop to a component looks similar to how you add HTML attributes. However, since the value for quantity is an integer, it won't go in quotes but it should be wrapped in curly braces. For example, {100}. This syntax tells JSX to interpret the value within the braces directly as JavaScript.
+
+const Items = (props) => {
+  return <h1>Current Quantity of Items in Cart: {props.quantity}</h1>
+}
+
+Items.defaultProps = {
+  quantity: 0
+}
+
+class ShoppingCart extends React.Component {
+  constructor(props) {
+    super(props);
+  }
+  render() {
+    { /* Change code below this line */ }
+    return <Items quantity = {100}/>
+    { /* Change code above this line */ }
+  }
+};
+
+
+
+
