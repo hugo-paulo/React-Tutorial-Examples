@@ -16,9 +16,9 @@ const Items = (props) => {
   return <h1>Current Quantity of Items in Cart: {props.quantity}</h1>
 };
 
-// Change code below this line
+
 Items.propTypes = {quantity: PropTypes.number.isRequired}
-// Change code above this line
+
 
 Items.defaultProps = {
   quantity: 0
@@ -44,9 +44,9 @@ class App extends React.Component {
   render() {
     return (
         <div>
-            { /* Change code below this line */ }
+            
             <Welcome name="Hugo"/>
-            { /* Change code above this line */ }
+            
         </div>
     );
   }
@@ -60,9 +60,9 @@ class Welcome extends React.Component {
   render() {
     return (
         <div>
-          { /* Change code below this line */ }
+          
           <p>Hello, <strong>{this.props.name}</strong>!</p>
-          { /* Change code above this line */ }
+          
         </div>
     );
   }
@@ -85,7 +85,7 @@ class CampSite extends React.Component {
     );
   }
 };
-// Change code below this line
+
 
 const Camper = (props) => {
   return <p>The camper: {props.name} will be assisting you.</p>
