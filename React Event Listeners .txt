@@ -14,14 +14,14 @@ class MyComponent extends React.Component {
     this.handleEnter = this.handleEnter.bind(this);
     this.handleKeyPress = this.handleKeyPress.bind(this);
   }
-  // change code below this line
+  
   componentDidMount() {
     document.addEventListener("keydown", this.handleKeyPress);
   }
   componentWillUnmount() {
     document.removeEventListener("keydown", this.handleKeyPress); //used to clean up resoures
   }
-  // change code above this line
+  
   handleEnter() {
     this.setState((state) => ({
       message: state.message + 'You pressed the enter key! '
